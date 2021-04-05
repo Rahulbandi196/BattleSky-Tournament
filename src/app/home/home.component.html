@@ -1,0 +1,13 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Browse Tournaments</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards" [colspan]="card.cols" [rowspan]="card.rows"></mat-grid-tile>
+      <mat-card class="dashboard-card" [style.background-image]="getImage(cards.imagename)">
+        <mat-card-header>
+          <mat-card-title>
+            {{cards.title}}
+          </mat-card-title>
+        </mat-card-header> 
+      </mat-card>
+  </mat-grid-list>
+</div>
