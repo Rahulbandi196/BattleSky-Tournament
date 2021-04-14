@@ -1,0 +1,10 @@
+
+.content {
+    padding:20px;
+
+}
+
+.content > mat-card {
+    width:300px;
+    height:auto;
+}

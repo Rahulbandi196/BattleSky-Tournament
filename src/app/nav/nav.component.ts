@@ -10,6 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class NavComponent {
 
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -18,4 +19,16 @@ export class NavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+
+  showMe:boolean=false
+  ngOnIt(){
+
+  }
+  toogleTag(){
+    this.showMe=!this.showMe
+  }
+
 }
+
+
+

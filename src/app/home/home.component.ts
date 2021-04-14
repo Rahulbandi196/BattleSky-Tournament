@@ -37,7 +37,7 @@ export class HomeComponent {
       this.loadCards();
     });
 
-    this.appService.getDeals().subscribe(
+    this.appService.getTournaments().subscribe(
       response => {
         this.cardsForHandset = response.handsetCards;
         this.cardsForWeb = response.webCards;
@@ -53,8 +53,8 @@ export class HomeComponent {
     this.cards = this.isHandset ? this.cardsForHandset:this.cardsForWeb;
   }
 
-  getImage(imageName:string):string {
-    return 'url('+'http://localhost:3000/images/'+ imageName +'.jpg' + ')';
+  getImage(imageName:string) {
+    return 'url('+'http://images/card1.jpg'+ imageName +'card1.jpg' + ')';
 
   }
 }

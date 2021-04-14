@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
 
 import {MatButtonModule} from '@angular/material/button';
 import { NavComponent } from './nav/nav.component';
@@ -18,12 +19,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowseComponent } from './browse/browse.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    BrowseComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { AuthModule } from './auth/auth.module';
     HttpClientModule,
     MatButtonModule,
     LayoutModule,
+    FlexLayoutModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
@@ -39,7 +44,8 @@ import { AuthModule } from './auth/auth.module';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    AuthModule
+    AuthModule,
+    FormsModule
    
   ],
   providers: [],
