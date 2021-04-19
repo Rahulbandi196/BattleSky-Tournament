@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularFireModule } from '@angular/fire';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,13 +22,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowseComponent } from './browse/browse.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    BrowseComponent
+    BrowseComponent,
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { BrowseComponent } from './browse/browse.component';
     HttpClientModule,
     MatButtonModule,
     LayoutModule,
+    AngularFireModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -45,10 +50,17 @@ import { BrowseComponent } from './browse/browse.component';
     MatCardModule,
     MatMenuModule,
     AuthModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp({apiKey: "AIzaSyCkkIG-JW735vxW-KgtLL-L9xusE9iL_D0",
+    authDomain: "battlesky-50de0.firebaseapp.com",
+    projectId: "battlesky-50de0",
+    storageBucket: "battlesky-50de0.appspot.com",
+    messagingSenderId: "787813595807",
+    appId: "1:787813595807:web:84576f890844ee623500aa"
+  })
    
   ],
-  providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
